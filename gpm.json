@@ -1,0 +1,60 @@
+{
+ "added": [
+  {
+   "id": 1,
+   "type": "testImplementation",
+   "installed_name": "junit",
+   "gpm_dep": {
+    "artifact_id": "junit",
+    "default_type": "implementation",
+    "docs": "https://mvnrepository.com/artifact/junit/junit",
+    "get_from": "Central",
+    "group_id": "junit",
+    "name": "JUnit",
+    "description": "JUnit is a unit testing framework for Java, created by Erich Gamma and Kent Beck."
+   }
+  },
+  {
+   "id": 2,
+   "type": "testImplementation",
+   "installed_name": "expekt",
+   "gpm_dep": {
+    "artifact_id": "expekt",
+    "default_type": "implementation",
+    "docs": "https://mvnrepository.com/artifact/com.theapache64/expekt",
+    "get_from": "JCenter",
+    "group_id": "com.theapache64",
+    "name": "Expekt",
+    "description": "An assertion library for Kotlin"
+   }
+  },
+  {
+   "id": 3,
+   "type": "implementation",
+   "installed_name": "coroutines-core",
+   "gpm_dep": {
+    "artifact_id": "kotlinx-coroutines-core",
+    "default_type": "implementation",
+    "docs": "https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-core",
+    "get_from": "Central",
+    "group_id": "org.jetbrains.kotlinx",
+    "name": "Kotlinx Coroutines Core",
+    "description": "Coroutines support libraries for Kotlin"
+   }
+  },
+  {
+   "id": 4,
+   "type": "implementation",
+   "installed_name": "mordant",
+   "gpm_dep": {
+    "artifact_id": "mordant",
+    "default_type": "implementation",
+    "docs": "https://mvnrepository.com/artifact/com.github.ajalt/mordant",
+    "get_from": "Central",
+    "group_id": "com.github.ajalt",
+    "name": "Mordant",
+    "description": "Full-featured text styling for Kotlin command-line applications"
+   }
+  }
+ ]
+}
