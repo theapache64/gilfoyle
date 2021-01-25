@@ -9,24 +9,25 @@ import org.junit.Test
 
 class AdbRepoTest {
 
-    private lateinit var configRepo: ConfigRepo
     private lateinit var adbRepo: AdbRepo
+    private lateinit var config: Config
+    private lateinit var device: String
 
     @Before
     fun setup() {
         adbRepo = AdbRepo()
-        configRepo = ConfigRepo()
+        config = ConfigRepo().config
+        device = adbRepo.getConnectedDevices(config).first()
     }
 
     @Test
     fun `Connected devices`() {
-        adbRepo.getConnectedDevices(configRepo.config)
+        adbRepo.getConnectedDevices(config)
             .size.should.equal(1)
     }
 
     @Test
     fun `Installed apps`() {
-        val config = configRepo.config
         adbRepo.getInstalledApps(
             config,
             adbRepo.getConnectedDevices(config).first()
@@ -34,12 +35,32 @@ class AdbRepoTest {
     }
 
     @Test
-    fun `Open app by package name`() {
-        val config = configRepo.config
+    fun `Open valid app by package name`() {
         adbRepo.openApp(
             config,
-            "com.theapache64.topcorn"
-        )
+            device,
+            "com.android.chrome"
+        ).should.`true`
+    }
+
+    @Test
+    fun `Open invalid app by package name`() {
+        adbRepo.openApp(
+            config,
+            device,
+            "this.is.a.invalid.package.name"
+        ).should.`false`
+    }
+
+    @Test
+    fun `Uninstall app`() {
+        adbRepo.uninstallApp(
+            config,
+            device,
+            "com.theapache64.topcorn2"
+        ).let {
+            println("Result $it")
+        }
     }
 
 }

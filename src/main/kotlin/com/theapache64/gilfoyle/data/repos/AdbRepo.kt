@@ -43,14 +43,28 @@ class AdbRepo @Inject constructor() {
     /**
      * To launch app with the given package name
      */
-    fun openApp(config: Config, packageName: String): Boolean {
+    fun openApp(config: Config, device: String, packageName: String): Boolean {
         val output = CommandExecutor.executeCommand(
-            "${config.adbPath} shell monkey -p $packageName 1",
+            "${config.adbPath} -s '$device' shell monkey -p $packageName 1",
             isLivePrint = false,
             isSkipException = true
         )
 
         return output.contains("Events injected: 1")
+    }
+
+    /**
+     * To uninstall app from device
+     */
+    fun uninstallApp(config: Config, device: String, packageName: String): Boolean {
+        val command = "${config.adbPath} -s '$device' uninstall '$packageName'"
+        val output = CommandExecutor.executeCommand(
+            command,
+            isLivePrint = false,
+            isSkipException = true
+        )
+
+        return output == "Success"
     }
 
 }

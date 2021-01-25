@@ -5,7 +5,7 @@ plugins {
 apply plugin: 'kotlin-kapt'
 
 group 'com.theapache64'
-version 'v1.0.0-alpha01'
+version 'v1.0.0-alpha02'
 
 repositories {
     mavenLocal()
@@ -21,7 +21,7 @@ dependencies {
     implementation 'com.theapache64:cyclone:1.0.0-alpha01'
 
     // Dagger:A fast dependency injector for Android and Java.
-    implementation 'com.google.dagger:dagger:2.27'
+    api 'com.google.dagger:dagger:2.27'
     kapt 'com.google.dagger:dagger-compiler:2.27'
 
     // Serialization

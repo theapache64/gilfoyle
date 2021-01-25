@@ -3,7 +3,7 @@ package com.theapache64.gilfoyle.feature.device
 import com.theapache64.cyclone.core.Activity
 import com.theapache64.cyclone.core.Intent
 import com.theapache64.gilfoyle.di.components.DaggerSelectDeviceComponent
-import com.theapache64.gilfoyle.feature.uninstall.UninstallActivity
+import com.theapache64.gilfoyle.feature.main.MainActivity
 import com.yg.kotlin.inquirer.components.promptList
 import com.yg.kotlin.inquirer.core.KInquirer
 import javax.inject.Inject
@@ -47,7 +47,7 @@ class SelectDeviceActivity : Activity() {
 
         // Watching for uninstall activity launch
         viewModel.launchUninstallActivity.observe { device ->
-            startActivity(UninstallActivity.getStartIntent(device))
+            startActivity(MainActivity.getStartIntent(device))
         }
     }
 }
