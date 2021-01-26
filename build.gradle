@@ -5,7 +5,7 @@ plugins {
 apply plugin: 'kotlin-kapt'
 
 group 'com.theapache64'
-version 'v1.0.0-alpha02'
+version 'v1.0.0-alpha01'
 
 repositories {
     mavenLocal()
