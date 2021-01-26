@@ -1,6 +1,8 @@
-# gilfoyle
+![](demo.gif)
 
-Interactive CLI, to bulk uninstall apps from your Android device.
+# gilfoyle 🤓
+
+A CLI to interactively remove unused apps from your Android device.
 
 ## Usage
 
@@ -12,6 +14,12 @@ Package name: com.my.app
 >  1) View
    2) Uninstall
 ```
+
+## Install
+
+- Download this repository
+- Open `config.json` and set `adb_path`
+- Finally, run `java -jar gilfoyle.main.jar` 
 
 ## Test
 
