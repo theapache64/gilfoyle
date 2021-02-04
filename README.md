@@ -101,7 +101,6 @@ Give a ⭐️ if this project helped you!
 
 ## ☑️ TODO
 
-- [ ] Task 1
 
 ## 📝 License
 
