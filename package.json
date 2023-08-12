@@ -1,5 +1,5 @@
 {
-  "bin": {"gilfoyle-main": "jdeploy-bundle/jdeploy.js"},
+  "bin": {"gilfoyle": "jdeploy-bundle/jdeploy.js"},
   "author": "theapache64",
   "description": "A CLI to interactively remove unused apps from your Android device.",
   "main": "index.js",
@@ -21,7 +21,7 @@
     "shelljs": "^0.8.4"
   },
   "license": "ISC",
-  "name": "gilfoyle-main",
+  "name": "gilfoyle",
   "files": ["jdeploy-bundle"],
   "scripts": {"test": "echo \"Error: no test specified\" && exit 1"}
 }
