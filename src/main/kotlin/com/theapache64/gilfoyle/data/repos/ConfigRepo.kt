@@ -10,8 +10,8 @@ import javax.inject.Inject
 class ConfigRepo @Inject constructor() {
 
     val config: Config by lazy {
-        File("${JarUtils.getJarDir()}config.json").readText().let { configJsonString ->
-            JsonUtils.json.decodeFromString(configJsonString)
-        }
+        val androidHome = System.getenv("ANDROID_HOME")
+        val adbPath = "${androidHome}/platform-tools/adb"
+        Config(adbPath = adbPath)
     }
 }

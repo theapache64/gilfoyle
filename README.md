@@ -22,10 +22,8 @@
 <details open="open">
 <summary><b>Automatic Installation</b></summary> <br/>
 
-Copy paste below line into your terminal.
-
-```shell script
-wget "https://raw.githubusercontent.com/theapache64/gilfoyle/master/install.sh" -q --show-progress -O install.sh && sh install.sh && source ~/.bashrc
+```shell
+sudo npm install -g gilfoyle
 ```
 
 </details>
@@ -94,18 +92,12 @@ Give a ⭐️ if this project helped you!
     <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="160">
 </a>
 
-<a href="https://www.paypal.me/theapache64" target="_blank">
-    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donation" width="160">
-</a>
-
-
-## ☑️ TODO
 
 
 ## 📝 License
 
 ```
-Copyright © 2021 - theapache64
+Copyright © 2023 - theapache64
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
