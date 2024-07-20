@@ -5,7 +5,7 @@
   "main": "index.js",
   "preferGlobal": true,
   "repository": "https://github.com/theapache64/gilfoyle",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "jdeploy": {
     "jdk": false,
     "javaVersion": "17",
