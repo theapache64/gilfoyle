@@ -148,4 +148,5 @@ gradle-app.setting
 ### Gradle Patch ###
 **/build/
 
+node_modules
 # End of https://www.toptal.com/developers/gitignore/api/kotlin,intellij,gradle
